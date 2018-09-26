@@ -4,3 +4,6 @@ function baibai() {
 function Kyp(){
   return ture;
 }
+function Kyp1(){
+    return ture;
+}
