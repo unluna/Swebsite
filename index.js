@@ -1,6 +1,6 @@
 function baibai() {
   return true;
 }
-function Kyo(){
+function Kyp(){
   return ture;
 }
