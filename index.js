@@ -4,3 +4,6 @@ function baibai() {
 function heihei() {
   return true;
 }
+function Kyp(){
+  return ture;
+}
