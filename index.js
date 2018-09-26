@@ -1,0 +1,3 @@
+function baibai() {
+  return true;
+}
