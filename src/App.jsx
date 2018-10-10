@@ -3,14 +3,13 @@
 * */
 import React, { Component } from 'react'
 import './public.scss'
+import Baibai from './component/bai/baibai'
 
 export default class App extends Component {
   render () {
     return (
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+      <ul className="" id="">
+        <Baibai/>
       </ul>
     )
   }
