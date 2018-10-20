@@ -10,7 +10,7 @@ header {
     position: fixed;
     top: 5px;
     left: 10px;
-    background: orange;
+    background: $headerBlueBoxShadow;
     border-radius: 100%;
   }
 
@@ -51,6 +51,7 @@ header {
     .header-aside {
       width: 300px;
       height: 40px;
+      display: flex;
       @include sapceBetween;
 
       .header-write-wrapper {
@@ -82,9 +83,56 @@ header {
 
 aside {
   width: 120px;
-  height: 300px;
-  background: greenyellow;
+  height: 460px;
   position: fixed;
-  top: 40px;
-  left: 0;
+  top: 60px;
+  left: 10px;
+  z-index: 1000;
+  
+  //.aside-connect{
+  //  width: 100px;
+  //  top: 36px;
+  //  left: 18px;
+  //  height: 460px;
+  //  position: fixed;
+  //  border: 2px solid $headerBlue;
+  //  z-index: -1;
+  //}
+  
+  ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @include sapceBetween;
+
+    li {
+      width: 100%;
+      height: 40px;
+      background: $headerBlueBoxShadow;
+      position: relative;
+    }
+    li::before{
+      content: "";
+      width: 3px;
+      height: 20px;
+      background: $headerBlue no-repeat;
+      position: absolute;
+      transform: translate(0, -50%);
+      left: 8px;
+      top: -10px;
+    }
+    li::after{
+      content: "";
+      width: 2px;
+      height: 20px;
+      background: $headerBlue no-repeat;
+      position: absolute;
+      transform: translate(0, -50%);
+      right: 8px;
+      top: -10px;
+    }
+  }
+
+
 }

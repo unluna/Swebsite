@@ -77,19 +77,16 @@ $border:gray;
 $Gates:#FFFFF2;
 /* center */
 @mixin center{
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 /* sapceAround */
 @mixin sapceAround{
-  display: flex;
   justify-content: space-around;
   align-items: center;
 }
 /* sapceBetween */
 @mixin sapceBetween{
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }

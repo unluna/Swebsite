@@ -73,14 +73,6 @@
       "pathRewrite": {
         "^/v2": "/v2"
       }
-    },
-    "/j": {
-      "target": "https://movie.douban.com",
-      "changeOrigin": true,
-      "secure": false,
-      "pathRewrite": {
-        "^/j": "/j"
-      }
     }
   },
   "jest": {
