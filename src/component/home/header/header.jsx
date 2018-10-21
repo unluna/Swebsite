@@ -5,19 +5,21 @@ import './header.scss'
 
 export default class Header extends Component {
 
-  sent=()=>{
-    const url = `/v2/music/search?q={{qwer}}&start=1`
-    axios.get(url)
-    .then(response => {
-      console.log(response)
-    })
+  onChangeAsideTop = () => {
+    // console.log(this.aside.style.top)
+    if(this.aside.style.top === `-460px`){
+      this.aside.style.top = 60 + 'px'
+    } else {
+      this.aside.style.top = -460 + 'px'
+    }
+
   }
 
   render () {
     return (
       <div>
         <header>
-          <div className={'header-nav-btn'} onClick={this.sent}/>
+          <div className={'header-nav-btn'} onClick={this.onChangeAsideTop}/>
           <section className={'header-wrapper'}>
             <div className={'header-logo'}>
               <div className={'header-logo-img'}/>
@@ -39,38 +41,38 @@ export default class Header extends Component {
             </div>
           </section>
         </header>
-        <aside>
+        <aside ref={aside => this.aside = aside}>
           <ul>
             <li>
-              <div className={''}/>
+              <div className={'icon-lock'}/>
               <h1>教师</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>前端</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>后台</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>美术</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>安全</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>宣传</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>游戏</h1>
             </li>
             <li>
-              <div/>
+              <div className={'icon-lock'}/>
               <h1>资源</h1>
             </li>
           </ul>

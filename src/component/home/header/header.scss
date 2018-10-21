@@ -3,6 +3,7 @@ header {
   height: 40px;
   background-color: $headerBlue;
   position: fixed;
+  z-index: 1000;
 
   .header-nav-btn {
     width: 30px;
@@ -71,6 +72,7 @@ header {
           line-height: 40px;
           color: $white;
           letter-spacing: 1px;
+          user-select: none;
         }
         h1 {
           width: 65px;
@@ -87,17 +89,9 @@ aside {
   position: fixed;
   top: 60px;
   left: 10px;
-  z-index: 1000;
-  
-  //.aside-connect{
-  //  width: 100px;
-  //  top: 36px;
-  //  left: 18px;
-  //  height: 460px;
-  //  position: fixed;
-  //  border: 2px solid $headerBlue;
-  //  z-index: -1;
-  //}
+  z-index: 10;
+  transition-duration: 1s;
+  transition-timing-function:cubic-bezier(.38,1.49,1,1.24)  ;
   
   ul {
     width: 100%;
@@ -111,6 +105,30 @@ aside {
       height: 40px;
       background: $headerBlueBoxShadow;
       position: relative;
+      border-radius: 3px;
+      display: flex;
+      @include sapceAround;
+
+      div,h1{
+        width: 40px;
+        height: 40px;
+      }
+      //部门的logo
+      div::before{
+        line-height: 40px;
+        color: $headerBlue;
+        font-size: 20px;
+        padding-left: 10px;
+      }
+      //部门名
+      h1{
+        color: $headerBlue;
+        line-height: 40px;
+        letter-spacing: 2px;
+        font-size: 14px;
+        font-weight: bold;
+        user-select: none;
+      }
     }
     li::before{
       content: "";
@@ -121,6 +139,10 @@ aside {
       transform: translate(0, -50%);
       left: 8px;
       top: -10px;
+    }
+    li:first-child::before,li:first-child::after{
+      top: -65px;
+      height: 130px;
     }
     li::after{
       content: "";
