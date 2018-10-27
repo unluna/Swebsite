@@ -4,37 +4,23 @@ import './SourceSendBox.scss'
 
 export default class SourceSendBox extends React.Component {
   state = {
-    input: 0,
-    dNum: 0,
+    inners: '',
+    innersNum: 0,
   }
 
-  /*componentDidMount () {
-    let textarea = (id) => document.getElementById(id)
-    let count = (id) => {
-      textarea(id).onchange = () => {
-        const idValue = textarea(id).value
-        let data1 = {
-          num: parseInt(idValue.length),
-        }
-        data1.dNum = 1000 - data1.num
-        this.setState = ({
-          num: data1.num,
-          dNum: data1.dNum
-        })
-        alert(this.setState.num + 'haha' + this.setState.dNum)
-      }
-    }
-    count('boxTextarea')
-  }*/
-  onChange=()=>{
-    let {input}=this.state
-    this.setState({input})
+  change = (event) => {
+    const {inners, innersNum} = this.state
+    this.setState({
+      inners: event.target.value,
+      innersNum: inners.toString().length,
+
+    })
   }
 
   render () {
-    const {input}=this.state
-    console.log('text',input)
-    // const input=this.state.input
+    const {inners,innersNum} = this.state
+    console.log(inners)
+    console.log(innersNum)
     return (
       <div className="box">
         <div className="box-login">
@@ -44,7 +30,9 @@ export default class SourceSendBox extends React.Component {
                               placeholder="请输入标题" maxLength="1000"/></div>
             <div className="text">
                 <textarea
-                  placeholder="发点啥？(少于1000字符)" id="boxTextarea" onChange={this.onChange} ref={input=>this.input=input}/> <p>{this.state.num}</p></div>
+                  placeholder="发点啥？(少于1000字符)" id="boxTextarea"
+                  onChange={this.change} value={inners}/>
+              <p>{this.state.num}</p></div>
 
           </div>
           <div className="box-info">

@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
+import './homeContent.scss'
+
 export default class HomeContent extends Component {
   render () {
     return (
-      <div>
+      <main >
         123
-      </div>
+      </main>
     )
   }
 }
