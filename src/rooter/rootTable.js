@@ -5,3 +5,6 @@ export const home='/app/home';
 export const header='/app/home/header';
 export const headerNavigation='/app/home/header/navigation';
 export const homeContent='/app/home/homeContent';
+export const sourceR='/app/home/source';
+export const sourceHome ='/app/home/source/sourceHome';
+export const sourceSend ='/app/home/source/sourceSend';

@@ -50,6 +50,16 @@ export default class Header extends Component {
           </section>
         </header>
         <Navigation getNav={this.getNav}/>
+        {
+          /*<aside>
+          <ul>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+            <li>123</li>
+          </ul>
+        </aside>*/}
       </div>
     )
   }

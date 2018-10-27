@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
-
 import './navigation.scss'
 import { homeContent } from '../../rooter/rootTable'
+import {sourceHome} from '../../rooter/rootTable'
 
 export default class Navigation extends Component {
 
@@ -55,6 +55,12 @@ export default class Navigation extends Component {
             <li>
               <div className={'icon-lock'}/>
               <h1>游戏</h1>
+            </li>
+          </NavLink>
+          <NavLink to={sourceHome}>
+            <li>
+              <div className={'icon-lock'}/>
+              <h1>资源</h1>
             </li>
           </NavLink>
         </ul>

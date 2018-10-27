@@ -72,27 +72,69 @@ html {
 /* color */
 $headerBlue: #188eee;
 $headerBlueBoxShadow: #98F5FF;
-$white:white;
-$border:gray;
-$Gates:#FFFFF2;
+$white: white;
+$border: gray;
+$Gates: #FFFFF2;
+$K_sender: #379be9;
+$K_herder: #db0b1c;
+$K_sourceName: rgba(222, 28, 49, 0.8);
+$K_sourceHome: #f2f2f2;
+$K_SendBgc: rgba(133, 108, 114, 0.1);
+$K_SendHover: #73575c;
+$K_SendA: #126bae;
+$K_SendLi: #8a988e;
+$K_LiHover: silver;
+$K_BoxOperate: black;
+$K_ButtonActive: #3e8e41;
+$K_HoverBgc:#4CAF50;
+
 /* center */
-@mixin center{
+@mixin center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+
 /* sapceAround */
-@mixin sapceAround{
+
+@mixin sapceAround {
+  display: flex;
   justify-content: space-around;
   align-items: center;
 }
+
 /* sapceBetween */
-@mixin sapceBetween{
-  justify-content: space-between;
-  align-items: center;
-}
-/*hideLetter*/
-@mixin hideLetters{
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
+
+  @mixin sapceBetween {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*hideLetter*/
+  @mixin hideLetters {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @mixin SourceBody {
+    overflow-x: hidden;
+    font-size: 2rem;
+    background-color: #f2f2f2;
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+    }
+  }
+
+@mixin SourceA {
+  a:hover {
+    color: #73575c;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:focus {
+    outline-color: #379be9;
+    color: #c21f30;
+  }
 }
