@@ -1,0 +1,61 @@
+@import "../../../../../common";
+
+.SendNav {
+  font-size: 1rem;
+}
+
+.SendNav a:hover {
+  text-decoration: none;
+}
+
+.SendNav li > a {
+  color: $K_SendLi;
+  text-decoration: none;
+}
+
+.SendNav .navInner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+  height: 1.6rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.SendNav ul {
+  display: flex;
+}
+
+.SendNav li {
+  padding: 0 1rem;
+  height: 1.2rem;
+  flex-wrap: nowrap;
+}
+
+.SendNav li:hover {
+  padding-bottom: 0.6rem;
+  border-bottom: 3px solid $K_LiHover;
+}
+
+@media screen and (max-width: 767px) {
+  .SendNav li {
+    padding: 0 0.3rem;
+    flex-wrap: nowrap;
+    font-size: 1rem;
+  }
+  .SendNav {
+    min-width: 74px;
+    ul{
+      min-width: 26px;
+      li{
+        min-width: 25px;
+      }
+    }
+  }
+  .box {
+    .box-login {
+      //min-width: 500px;
+    }
+  }
+}

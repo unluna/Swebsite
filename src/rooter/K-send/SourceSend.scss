@@ -1,0 +1,38 @@
+@import "../../common";
+
+.suspensionWindow {
+  position: fixed;
+  background-color: $K_SendBgc;
+  padding: 0.3rem;
+  width: 1rem;
+  bottom: 4rem;
+  right: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  a:hover {
+    color: $K_SendHover;
+    text-decoration: none;
+  }
+}
+
+.iconfont {
+  font-size: 1.2rem;
+}
+
+i {
+  font-style: normal;
+}
+
+.suspensionWindow a {
+  color: $K_SendA;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .suspensionWindow {
+    width:0.8rem;
+    right: 0.3rem;
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
+}

@@ -1,0 +1,202 @@
+@import './../../../../../common';
+
+.box {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.box-login {
+  border: 3px solid rgba(181, 152, 161, 0.3);
+  border-radius: 28px;
+}
+
+textarea {
+  border: none;
+  resize: none;
+  overflow: auto;
+  background-color: rgba(209, 194, 211, 0.2);
+  line-height: 2rem;
+}
+
+textarea::placeholder {
+  color: rgba(94, 97, 109, 0.5);
+}
+
+.box-textArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.text, .title {
+  display: flex;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.text textarea {
+  text-indent: 2em;
+  line-height: 2rem;
+  width: 43rem;
+  height: 20rem;
+  font-size: 1rem;
+  padding: 1rem;
+  min-width: 166px;
+  margin-top: 0.3rem;
+}
+
+.title textarea {
+  text-align: center;
+  font-weight: normal;
+  font-size: 1.2rem;
+  margin: 1rem 1rem;
+  width: 40rem;
+  height: 2.9rem;
+  line-height: 2.8rem;
+  min-width: 160px;
+}
+
+textarea::placeholder {
+  color: $K_LiHover;
+}
+
+.box-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+  height: 2rem;
+}
+
+.box-operate {
+  align-self: center;
+  font-size: 16px;
+  color: $K_BoxOperate;
+  flex-wrap: nowrap;
+}
+
+.box-operate-line {
+  margin-left: 1rem;
+}
+
+.box-commentBtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media screen and (max-width: 767px) {
+  button:active {
+    background-color: $K_ButtonActive;
+    box-shadow: 0 2px $K_LiHover;
+    transform: translateY(2px);
+  }
+
+  .box-login {
+    width: 90%;
+    min-height: 437px;
+  }
+  .title textarea {
+    font-size: 1rem;
+    font-weight: bolder;
+    min-height: 45px;
+    line-height: 3rem;
+    height: 3rem;
+    text-align: center;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .text textarea {
+    font-size: 1rem;
+    min-height: 222px;
+    line-height: 3rem;
+  }
+
+  b {
+    font-size: 1rem;
+  }
+
+  button {
+    border-radius: 28px;
+    border: none;
+    outline: none;
+    padding: 3rem;
+    color: white;
+    background-color: $K_HoverBgc;
+  }
+
+  button span {
+    font-size: 1rem;
+    transition: 0.3s;
+    padding: 0 2rem;
+    min-height: 21px;
+  }
+  button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 2px $K_LiHover;
+    transform: translateY(2px)
+  }
+
+}
+
+.button {
+  padding: 0.3rem;
+}
+
+@media only screen and (max-width: 767px) {
+  .text, .title {
+    margin: 0 1rem;
+  }
+  button span {
+    padding: 0 1rem;
+  }
+  .title textarea {
+    margin: 0.6rem 0.5rem;
+  }
+  .box-info {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+
+  button {
+    border-radius: 28px;
+    border: none;
+    outline: none;
+    transition: all 0.1s;
+    cursor: pointer;
+  }
+
+  button span {
+    font-size: 1rem;
+    transition: 0.3s;
+    padding-left: 1.3rem;
+  }
+
+  button:hover {
+    background-color: $K_HoverBgc; /* Green */
+    color: white;
+    box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  }
+  /*box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
+  button span:after {
+    content: ' »';
+    opacity: 0;
+  }
+
+  button:hover span {
+    padding-right: 1rem;
+  }
+
+  button:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  button:active {
+    background-color: $K_ButtonActive;
+    box-shadow: 0 2px silver;
+    transform: translateY(2px);
+  }
+}

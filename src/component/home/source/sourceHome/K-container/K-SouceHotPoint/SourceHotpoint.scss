@@ -1,0 +1,15 @@
+@import'../../../../../../common';
+.header {
+  display: inline-block;
+  padding-right: 1rem;
+  font-size: 1rem;
+  border-right: 3px solid $K_herder;
+}
+@media screen and (max-width: 767px){
+  .header {
+    padding-right: 0;
+  }
+  .header {
+    font-size: 0.8rem;
+  }
+}
