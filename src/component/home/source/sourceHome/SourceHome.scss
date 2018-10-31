@@ -1,0 +1,9 @@
+@import "../../../../common";
+.sourceHome {
+background-color: $K_sourceHome;
+}
+@media screen and (max-width: 767px) {
+  .sourceHome{
+ overflow-x: hidden;
+  }
+  }

@@ -1,0 +1,140 @@
+/**
+*这是一个全局样式文件
+*/
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #555;
+  font-size: 14px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+td, th, caption {
+  font-size: 14px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  font-size: 100%;
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+a {
+  color: #555;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  border: none;
+}
+
+ol, ul, li {
+  list-style: none;
+}
+
+input, textarea, select, button {
+  font: 14px Verdana, Helvetica, Arial, sans-serif;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+/* color */
+$headerBlue: #188eee;
+$headerBlueBoxShadow: #98F5FF;
+$white: white;
+$border: gray;
+$Gates: #FFFFF2;
+$K_sender: #379be9;
+$K_herder: #db0b1c;
+$K_sourceName: rgba(222, 28, 49, 0.8);
+$K_sourceHome: #f2f2f2;
+$K_SendBgc: rgba(133, 108, 114, 0.1);
+$K_SendHover: #73575c;
+$K_SendA: #126bae;
+$K_SendLi: #8a988e;
+$K_LiHover: silver;
+$K_BoxOperate: black;
+$K_ButtonActive: #3e8e41;
+$K_HoverBgc:#4CAF50;
+
+/* center */
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sapceAround */
+
+@mixin sapceAround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* sapceBetween */
+
+  @mixin sapceBetween {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /*hideLetter*/
+  @mixin hideLetters {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @mixin SourceBody {
+    overflow-x: hidden;
+    font-size: 2rem;
+    background-color: #f2f2f2;
+    @media screen and (max-width: 767px) {
+      font-size: 1rem;
+    }
+  }
+
+@mixin SourceA {
+  a:hover {
+    color: #73575c;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:focus {
+    outline-color: #379be9;
+    color: #c21f30;
+  }
+}

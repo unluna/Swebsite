@@ -1,0 +1,68 @@
+@import "../../common";
+
+.SourceHomeNav {
+  height: 4.5rem;
+}
+
+.SourceHomeNav li {
+  @include SourceA;
+}
+
+.SourceHomeNav li:hover {
+  a:hover {
+    color: #8a988e;
+    text-decoration: none;
+  }
+  border: 1px solid deepskyblue;
+  box-shadow: 2px 2px 2px silver;
+}
+
+a {
+  text-decoration: none;
+}
+
+li > a {
+  color: #8a988e;
+  text-decoration: none;
+}
+
+.SourceHomeNav ul {
+  display: flex;
+  font-size: 1rem;
+  margin-left: 8.5rem;
+  margin-top: 40px;
+  padding-top: 2.3rem;
+  max-width: max-content;
+  min-height: max-content;
+  min-width: 320px;
+}
+
+.SourceHomeNav li {
+  padding: 0 1rem;
+  border-bottom: 1px solid silver;
+}
+
+@media screen and (max-width: 767px) {
+  .SourceHomeNav {
+    display: flex;
+    margin-top: 40px;
+    width: 100%;
+  }
+  .navFlex {
+    width: 100%;
+    @include center;
+  }
+  .SourceHomeNav ul {
+    @include center;
+    height: 2.2rem;
+    width: max-content;
+    margin: 0;
+    padding-top: 1rem;
+  }
+
+  .SourceHomeNav li {
+    padding: 0 0.3rem;
+    font-size: 1rem;
+  }
+
+}
