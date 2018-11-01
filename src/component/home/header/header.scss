@@ -20,6 +20,8 @@
       width: 120px;
       height: 20px;
       display: flex;
+      position: absolute;
+      left: 0;
       align-items: center;
       justify-content: center;
 
@@ -42,35 +44,25 @@
       }
     }
 
-    .header-aside {
-      width: 300px;
-      height: 20px;
+    .header-sign-wrapper{
+      position: absolute;
+      right: 0;
+      top: 0;
       display: flex;
-      @include sapceBetween;
 
-      .header-write-wrapper {
-        width: 80px;
+      .icon-user,h1{
         height: 20px;
-        display: flex;
-        @include sapceBetween;
-
-        div {
-          width: 20px;
-          font-size: 12px;
-          padding-right: 5px;
-        }
-        h1, div {
-          height: 20px;
-          text-align: left;
-          line-height: 20px;
-          color: $white;
-          letter-spacing: 1px;
-          user-select: none;
-        }
-        h1 {
-          width: 65px;
-          font-size: 12px;
-        }
+        line-height: 20px;
+        color: $white;
+        user-select: none;
+      }
+      .icon-user{
+        width: 20px;
+      }
+      h1{
+        width: 30px;
+        font-size: 12px;
+        letter-spacing: 2px;
       }
     }
   }
