@@ -8,9 +8,6 @@ import {sourceR} from '../../rooter/rootTable'
 import HomeContent from './homeContent/homeContent'
 import SourceHome from './source/sourceHome/SourceHome'
 import SourceR from './source/sourceR'
-import FontEnd from './font-end/font-end'
-import Background from './background/background'
-import Game from './game/game'
 export default class Home extends Component {
   render () {
     return (
@@ -20,9 +17,6 @@ export default class Home extends Component {
           <Route path={homeContent} component={HomeContent}/>
           <Route path={sourceHome} component={SourceHome}/>
           <Route path={sourceR} component={SourceR}/>
-          <Route path={fontEnd} component={FontEnd}/>
-          <Route path={background} component={Background}/>
-          <Route path={game} component={Game}/>
           <Redirect to={homeContent}/>
         </Switch>
       </div>
