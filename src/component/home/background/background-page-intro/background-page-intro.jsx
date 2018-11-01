@@ -22,7 +22,8 @@ export default class BgPageIntro extends React.Component {
                         awwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
                         awwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwawaw
                         awawawawawawawawawawawawawawawawawawawawaw
-                        awawawawawawawawawawawawawaw
+                        awawawawawawawawawawawawawawas
+
                 </div>
                 </div>
             </div>
