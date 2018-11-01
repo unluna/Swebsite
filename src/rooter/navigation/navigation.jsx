@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { NavLink } from 'react-router-dom'
 import './navigation.scss'
-import { homeContent, sourceHome, fontEnd, background, game } from '../../rooter/rootTable'
+import { homeContent} from '../../rooter/rootTable'
 
 
 export default class Navigation extends Component {
@@ -21,19 +21,19 @@ export default class Navigation extends Component {
               <h1>教师</h1>
             </li>
           </NavLink>
-          <NavLink to={advertHome} onClick={this.props.ChangeNavTop}>
+          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>宣传</h1>
             </li>
           </NavLink>
-          <NavLink to={fontEnd} onClick={this.props.ChangeNavTop}>
+          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>前端</h1>
             </li>
           </NavLink>
-          <NavLink to={background} onClick={this.props.ChangeNavTop}>
+          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>后台</h1>
@@ -51,13 +51,13 @@ export default class Navigation extends Component {
               <h1>安全</h1>
             </li>
           </NavLink>
-          <NavLink to={game} onClick={this.props.ChangeNavTop}>
+          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>游戏</h1>
             </li>
           </NavLink>
-          <NavLink to={sourceR} onClick={this.props.ChangeNavTop}>
+          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>资源</h1>
