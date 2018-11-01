@@ -14,10 +14,6 @@
     background-color: #ffe1f1;
   }
 
-  div {
-    overflow: visible;
-    float: left;
-  }
 
   .Contain {
     width: 100%;
@@ -40,6 +36,8 @@
     -moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     margin-top: 7px;
+    overflow: visible;
+    float: left;
   }
 
   .Menu {

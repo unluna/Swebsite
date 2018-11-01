@@ -5,25 +5,25 @@ import './font-end-mainTop.scss'
 export default class PageMainTop extends React.Component {
     render() {
         return (
-            <div className="FE-page-main-top">
-            <div className="FE-page-main-top-set">
-                <div className="FE-page-title">
+            <div className="page-main-top">
+            <div className="page-main-top-set">
+                <div className="page-title">
     
                     什么是前端？
     
                 </div>
-                <div className="FE-pageMain">
+                <div className="pageMain">
     
     
-                    <div className="FE-wrapper">
-                        <div className="FE-container" id="c0">
-                            <div className="FE-image" id="i0">
-                                <div className="FE-city">
+                    <div className="wrapper">
+                        <div className="container" id="c0">
+                            <div className="image" id="i0">
+                                <div className="city">
                                     
                                 </div>
                             </div>
-                            <div className="FE-story" id="s0">
-                                <div className="FE-info">
+                            <div className="story" id="s0">
+                                <div className="info">
                                     <h3>
                                         HTML5
                                     </h3>
@@ -33,14 +33,14 @@ export default class PageMainTop extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="FE-container" id="c1">
-                            <div className="FE-image" id="i1">
-                                <div className="FE-city">
+                        <div className="container" id="c1">
+                            <div className="image" id="i1">
+                                <div className="city">
                                     <img src="./img/css.jpg" alt=""/>
                                 </div>
                             </div>
-                            <div className="FE-story" id="s1">
-                                <div className="FE-info">
+                            <div className="story" id="s1">
+                                <div className="info">
                                     <h3>
                                         css
                                     </h3>
@@ -50,14 +50,14 @@ export default class PageMainTop extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="FE-container" id="c2">
-                            <div className="FE-image" id="i2">
-                                <div className="FE-city">
+                        <div className="container" id="c2">
+                            <div className="image" id="i2">
+                                <div className="city">
                                   
                                 </div>
                             </div>
-                            <div className="FE-story" id="s2">
-                                <div className="FE-info">
+                            <div className="story" id="s2">
+                                <div className="info">
                                     <h3>
                                         JavaScript
                                     </h3>
@@ -71,7 +71,7 @@ export default class PageMainTop extends React.Component {
     
                 </div>
     
-                <div className="FE-page">
+                <div className="page">
                     <a href="">what's more &emsp; >>></a>
     
                 </div>
