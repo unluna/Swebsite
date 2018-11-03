@@ -12,11 +12,11 @@ export default class PageMainTop extends React.Component {
                     什么是前端？
     
                 </div>
-                <div className="pageMain">
+                <div className="MpageMain">
     
     
-                    <div className="wrapper">
-                        <div className="container" id="c0">
+                    <div className="Mwrapper">
+                        <div className="Mcontainer" id="c0">
                             <div className="image" id="i0">
                                 <div className="city">
                                     
@@ -33,7 +33,7 @@ export default class PageMainTop extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="container" id="c1">
+                        <div className="Mcontainer" id="c1">
                             <div className="image" id="i1">
                                 <div className="city">
                                     <img src="./img/css.jpg" alt=""/>
@@ -50,7 +50,7 @@ export default class PageMainTop extends React.Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="container" id="c2">
+                        <div className="Mcontainer" id="c2">
                             <div className="image" id="i2">
                                 <div className="city">
                                   
