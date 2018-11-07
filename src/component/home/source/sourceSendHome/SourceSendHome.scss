@@ -1,0 +1,14 @@
+.SourceSend {
+  background-color: #f2f2f2;
+  height: auto;
+}
+
+@media screen and (max-width: 767px) {
+  .SourceSend {
+    font-size: 1rem;
+    height: 100%;
+    overflow-y: hidden;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+  }
+}

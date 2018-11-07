@@ -3,8 +3,7 @@
 .AdvertHead {
   height: auto;
   display: flex;
-  padding-top: 1rem;
-  margin-top: 4px;
+  background-color: #b2abc6;
   .headBG {
     width: 115rem;
     height: 61rem;
@@ -24,8 +23,13 @@
         color: rgba(249, 241, 219, 0.7);
       }
       h2 {
-        padding-top: 10rem;
         font-size: 6rem;
+      }
+      .previous {
+        padding-top: 10rem;
+      }
+      .last {
+        padding-top: 2rem;
       }
       h3 {
         padding-top: 4rem;
