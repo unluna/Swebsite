@@ -1,0 +1,109 @@
+.website-big-wrapper {
+  height: 273px;
+  width: 1170px;
+  margin: 0 auto 50px auto;
+  display: flex;
+  position: relative;
+
+  .website-aside-wrapper {
+    width: 240px;
+    height: 173px;
+    padding: 30px 15px;
+    background: #3A3A3A;
+
+    h1 {
+      width: 240px;
+      height: 18px;
+      margin-bottom: 15px;
+      color: $orange;
+      line-height: 18px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    ul {
+      width: 240px;
+      height: 140px;
+
+      li {
+        width: 240px;
+        height: 20px;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 20px;
+        color: $white;
+      }
+    }
+  }
+
+  .website-main-wrapper {
+    width: 870px;
+    height: 273px;
+    margin-left: 30px;
+    background: #3A3A3A;
+    position: relative;
+    display: flex;
+
+    .main-little-wrapper {
+      width: 260px;
+      height: 213px;
+      padding: 30px 15px;
+      position: relative;
+      .big-tt {
+        width: 260px;
+        margin-bottom: 15px;
+        color: $orange;
+        font-weight: bold;
+        line-height: 18px;
+        font-size: 14px;
+      }
+      ul {
+        width: 260px;
+        height: 160px;
+        position: relative;
+
+        li {
+          width: 260px;
+          height: 40px;
+          padding-bottom: 10px;
+          margin-bottom: 10px;
+          position: relative;
+
+          .sml-img {
+            width: 40px;
+            height: 40px;
+            background: $white;
+            margin: 0 10px 2px 0;
+          }
+          .sml-content {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 210px;
+            height: 40px;
+
+            h1 {
+              position: absolute;
+              width: 210px;
+              top: 0;
+              left: 0;
+              color: #CCC;
+              line-height: 20px;
+              font-size: 14px;
+            }
+
+            p {
+              position: absolute;
+              width: 210px;
+              bottom: 0;
+              left: 0;
+              color: #888;
+              line-height: 20px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -71,9 +71,9 @@ html {
 
 /* color */
 $headerBlack: #3A3A3A;
-$orange:#F15A23;
+$orange: #F15A23;
 $white: white;
-$black:black;
+$black: black;
 $border: gray;
 $Gates: #FFFFF2;
 $K_sender: #379be9;
@@ -87,7 +87,7 @@ $K_SendLi: #8a988e;
 $K_LiHover: silver;
 $K_BoxOperate: black;
 $K_ButtonActive: #3e8e41;
-$K_HoverBgc:#4CAF50;
+$K_HoverBgc: #4CAF50;
 
 /* center */
 @mixin center {
@@ -106,26 +106,31 @@ $K_HoverBgc:#4CAF50;
 
 /* sapceBetween */
 
-  @mixin sapceBetween {
-    justify-content: space-between;
-    align-items: center;
-  }
+@mixin sapceBetween {
+  justify-content: space-between;
+  align-items: center;
+}
 
-  /*hideLetter*/
-  @mixin hideLetters {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+@mixin spaceBetween {
+  justify-content: space-between;
+  align-items: center;
+}
 
-  @mixin SourceBody {
-    overflow-x: hidden;
-    font-size: 2rem;
-    background-color: #f2f2f2;
-    @media screen and (max-width: 767px) {
-      font-size: 1rem;
-    }
+/*hideLetter*/
+@mixin hideLetters {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin SourceBody {
+  overflow-x: hidden;
+  font-size: 2rem;
+  background-color: #f2f2f2;
+  @media screen and (max-width: 767px) {
+    font-size: 1rem;
   }
+}
 
 @mixin SourceA {
   a:hover {
