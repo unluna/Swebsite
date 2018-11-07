@@ -1,0 +1,190 @@
+.main-content-wrapper {
+  width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+
+  .content-aside {
+    width: 235px;
+    height: 264px;
+    background: #EFEFEF;
+    padding: 15px;
+    border-left: 5px solid $orange;
+    position: relative;
+
+    h1 {
+      font-size: 14px;
+      margin-bottom: 15px;
+      line-height: 18px;
+      color: $orange;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 20px;
+      color: #555;
+    }
+
+    span {
+      position: absolute;
+      border-bottom: 5px solid $orange;
+      float: right;
+      font-size: 14px;
+      color: $orange;
+      right: 10px;
+      bottom: 15px;
+    }
+  }
+
+  .content-main {
+    margin-left: 30px;
+    height: 320px;
+    width: 870px;
+    position: relative;
+
+    .content-main-wrapper-T-L {
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 374px;
+      height: 159px;
+      border-bottom: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      padding-right: 60px;
+
+      div {
+        bottom: 1px;
+        right: 1px;
+        border-radius: 90px 0 0 0;
+      }
+    }
+    .content-main-wrapper-T-L:hover div,
+    .content-main-wrapper-T-R:hover div,
+    .content-main-wrapper-B-L:hover div,
+    .content-main-wrapper-B-R:hover div {
+      background: $orange;
+    }
+    .content-main-wrapper-T-R {
+      top: 0;
+      right: 0;
+      position: absolute;
+      width: 375px;
+      height: 159px;
+      border-bottom: 1px solid #ddd;
+      padding-left: 60px;
+
+      div {
+        bottom: 1px;
+        left: 1px;
+        border-radius: 0 90px 0 0;
+      }
+    }
+    .content-main-wrapper-B-L {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      width: 374px;
+      height: 160px;
+      border-right: 1px solid #ddd;
+      padding-right: 60px;
+
+      div {
+        top: 1px;
+        right: 1px;
+        border-radius: 0 0 0 90px;
+      }
+    }
+    .content-main-wrapper-B-R {
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      width: 375px;
+      height: 160px;
+      padding-left: 60px;
+
+      div {
+        top: 1px;
+        left: 1px;
+        border-radius: 0 0 90px 0;
+      }
+    }
+    .content-main-h1-t {
+      margin: 15px 0;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      color: $orange;
+      overflow: hidden;
+    }
+
+    .content-main-p-t {
+      width: 374px;
+      height: 76px;
+      margin-bottom: 40px;
+      color: #888;
+      font-size: 14px;
+      line-height: 15px;
+      overflow: hidden;
+    }
+    .content-main-h1-b {
+      margin: 40px 0 25px 0;
+      font-size: 14px;
+      line-height: 18px;
+      font-weight: bold;
+      color: $orange;
+      overflow: hidden;
+    }
+
+    .content-main-p-b {
+      width: 374px;
+      height: 76px;
+      color: #888;
+      font-size: 14px;
+      line-height: 15px;
+      overflow: hidden;
+    }
+    .content-main-div {
+      position: absolute;
+      width: 54px;
+      height: 54px;
+      background: #EFEFEF;
+      transition: all 0.75s ease;
+    }
+  }
+
+  .content-aside::before,
+  .content-aside::after,
+  .content-main::before,
+  .content-main::after {
+    content: "";
+    width: 100%;
+    background: #EFEFEF no-repeat;
+    position: absolute;
+  }
+
+  .content-aside::before {
+    border-left: 5px solid #EFEFEF;
+    height: 5px;
+    left: -5px;
+    bottom: -66px;
+  }
+
+  .content-aside::after {
+    border-left: 5px solid #EFEFEF;
+    height: 1px;
+    left: -5px;
+    bottom: -70px;
+  }
+
+  .content-main::before {
+    height: 5px;
+    bottom: -40px;
+    left: 0;
+  }
+
+  .content-main::after {
+    height: 1px;
+    bottom: -44px;
+    left: 0;
+  }
+}
