@@ -1,14 +1,16 @@
 import React ,{Component}from 'react'
 import './SourceSend.scss'
 import { NavLink } from 'react-router-dom'
-import { sourceSend } from '../rootTable'
+import { sourceSendHome } from '../rootTable'
 
-export default class SourceSendC extends Component {
+export default class SourceSend extends Component {
   render () {
     return (
+      <NavLink to={sourceSendHome}>
       <div className="suspensionWindow">
-        <NavLink to={sourceSend}>发布</NavLink>
+        发布
       </div>
+      </NavLink>
     )
   }
 }

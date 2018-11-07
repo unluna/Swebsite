@@ -1,13 +1,16 @@
 import React, { Component } from 'react'
 import { Route, Switch, Redirect } from 'react-router-dom'
-import { sourceSend } from '../../../rooter/rootTable'
-import SourceSend from './soueceSend/SourceSend'
-export default class SourceR extends Component{
-  render(){
-    return(
+import { sourceSendHome, sourceHome } from '../../../rooter/rootTable'
+import SourceSendHome from './sourceSendHome/SourceSendHome'
+import SourceHome from './sourceHome/SourceHome'
+
+export default class SourceR extends Component {
+  render () {
+    return (
       <Switch>
-        <Route to={sourceSend} component={SourceSend}/>
-        <Redirect to={sourceSend}/>
+        <Route  path={sourceHome} component={SourceHome}/>
+        <Route  path={sourceSendHome} component={SourceSendHome}/>
+        <Redirect to={sourceHome} />
       </Switch>
     )
   }

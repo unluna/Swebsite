@@ -358,7 +358,7 @@
       width: 870px;
       position: relative;
       display: flex;
-      @include sapceBetween;
+      @include spaceBetween;
 
       .little-photo-wrapper {
         position: relative;
