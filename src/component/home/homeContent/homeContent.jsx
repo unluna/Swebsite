@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 
 import './homeContent.scss'
@@ -11,6 +12,16 @@ export default class HomeContent extends Component {
           <div className={'logo-wrapper'}>
             <div className={'logo-img'}/>
           </div>
+          <ul className={'nav-wrapper'}>
+            <li>博客</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+          </ul>
         </div>
         {/*nav content begin*/}
         <div className={'navContent-big-wrapper'}>
