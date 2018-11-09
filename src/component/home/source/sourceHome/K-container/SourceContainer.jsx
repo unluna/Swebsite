@@ -42,14 +42,16 @@ class SourceContainer extends Component {
     }
   ]*/
   componentDidMount () {
-    this.props.setOut(this.data)
+    this.props.setOut()
   }
 
   render () {
     const data = this.props.setTime
+    const dataLast= this.props.setText
     return (
       <div className="container">
         <SourceHotPoint/>
+
         {
           data.map((name, index) => {
             return (
@@ -57,6 +59,7 @@ class SourceContainer extends Component {
             )
           })
         }
+
       </div>
 
     )
@@ -66,7 +69,8 @@ class SourceContainer extends Component {
 const mapStateToProps = (state) => ({
   goToSourceNav: state.goToSourceNav,
   getItems: state.getItems,
-  setTime: state.setTime
+  setTime: state.setTime,
+  setText:state.setText
 })
 export default connect(mapStateToProps, {
   changeSourceNavState,

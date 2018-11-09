@@ -1,18 +1,27 @@
 import React from 'react'
 // import SourceSendBoxCount from './sourceSendCount/SourceSendBoxCount'
 import './SourceSendBox.scss'
+import { send, sendContent } from '../../../../../redux/actions'
+import { connect } from 'react-redux'
 
-export default class SourceSendBox extends React.Component {
+class SourceSendBox extends React.Component {
   state = {
     inners: '',
     innersNum: 0,
   }
+
   change = (event) => {
     const {inners, innersNum} = this.state
     this.setState({
       inners: event.target.value,
       innersNum: inners.toString().length,
     })
+    this.props.send(inners)
+  }
+  click = () => {
+    //this.props.send()
+    const text = this.props.sendText
+    console.log(text)
   }
   /*componentDidMount () {
     let textarea = (id) => document.getElementById(id)
@@ -32,14 +41,16 @@ export default class SourceSendBox extends React.Component {
     }
  count('boxTextarea')
   }*/
-  autoHeight = (obj) => {
-    // let el=obj;
-    setTimeout(
-      () => {obj.style.text.cssText = 'height' + obj.scrollHeight + 'px'}, 0
-    )
-  }
+
+  /*  autoHeight = (obj) => {
+      // let el=obj;
+      setTimeout(
+        () => {obj.style.text.cssText = 'height' + obj.scrollHeight + 'px'}, 0
+      )
+    }*/
 
   render () {
+    //const send = () => this.props.send
     const {inners, innersNum} = this.state
     if ({innersNum} > 1000) {
       this.setState = {
@@ -47,8 +58,8 @@ export default class SourceSendBox extends React.Component {
       }
       alert(innersNum)
     }
-    console.log(inners)
-    console.log(innersNum)
+    /*console.log(inners)
+    console.log(innersNum)*/
     return (
       <div className="box">
         <div className="box-login">
@@ -68,7 +79,7 @@ export default class SourceSendBox extends React.Component {
             </div>
             <div className="box-commentBtn">
               <button className="iconfonticon-information-delivery">
-                <div className="button"><span>发布</span></div>
+                <div className="button"><span onClick={this.click}>发布</span></div>
               </button>
             </div>
           </div>
@@ -77,3 +88,10 @@ export default class SourceSendBox extends React.Component {
     )
   }
 }
+
+const mapStateToProps = (state) => ({
+  sendText: state.sendText
+})
+export default connect(mapStateToProps, {
+  send, sendContent
+})(SourceSendBox)

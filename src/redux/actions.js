@@ -6,7 +6,8 @@ import {
   FRONT_REQUEST_START,
   ITEM_SHOW,
   CHANGE_ITEM,
-  SET_TIME
+  SET_TIME,
+  SEND_TEXT
 } from './action-types'
 //inner：获取搜索框的文字
 export const getInner = (inner) => ({type: GET_INNER, data: inner})
@@ -41,7 +42,7 @@ export const setTimeOut = (item) => ({
 export const setOut = () => {
   return dispatch => {
     setTimeout(function () {
-     let data = [
+      let data = [
         {
           name: '阿拉斯加上课',
           title: '我的祖国',
@@ -79,5 +80,14 @@ export const setOut = () => {
       dispatch(setTimeOut(data))
     },)
   }
+}
+export const sendContent=(content)=>({
+  type:SEND_TEXT,data:content
+})
+export const send = (content) => {
+  return dispatch => {
+    dispatch(sendContent(content))
+  }
+
 }
 

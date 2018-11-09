@@ -6,3 +6,4 @@ export const FRONT_REQUEST_START='FRONT_REQUEST_START';
 export const ITEM_SHOW='ITEM_SHOW'
 export const CHANGE_ITEM='CHANGE_ITEM'
 export const SET_TIME='SET_TIME'
+export const SEND_TEXT='SEND_TEXT'

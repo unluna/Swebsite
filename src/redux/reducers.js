@@ -2,8 +2,8 @@ import { combineReducers } from 'redux'
 
 import {
   CHANGE_SOURCENAV_STATE,
-  GET_INNER, FRONT_REQUEST_START, SEE_STATE, CHANGE_ITEM,
-  SET_TIME
+  GET_INNER, FRONT_REQUEST_START, CHANGE_ITEM,
+  SET_TIME, SEND_TEXT
 } from './action-types'
 
 //inners：输入框获取的文字
@@ -42,10 +42,18 @@ function setTime (state=[],action) {
       return state
   }
 }
-
+function sendText (state='A',action) {
+  switch (action.type){
+    case SEND_TEXT:
+      return action.data;
+    default:
+      return state
+  }
+}
 export default combineReducers({
   inners,
   goToSourceNav,
   getItems,
-  setTime
+  setTime,
+  sendText,
 })
