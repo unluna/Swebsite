@@ -1,14 +1,21 @@
 import React ,{Component}from 'react'
 import './SourceSend.scss'
 import { NavLink } from 'react-router-dom'
-import { sourceSend } from '../rootTable'
-
-export default class SourceSendC extends Component {
+import { sourceSendHome } from '../rootTable'
+import { connect } from 'react-redux'
+ class SourceSend extends Component {
   render () {
     return (
-      <div className="suspensionWindow">
-        <NavLink to={sourceSend}>发布</NavLink>
+      <NavLink to={sourceSendHome}>
+      <div className="suspensionWindow" onClick={this.send}>
+        发布
       </div>
+      </NavLink>
     )
   }
 }
+const mapStateToProps = (state) => ({
+
+})
+export default connect(mapStateToProps, {
+})(SourceSend)

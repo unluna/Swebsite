@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import './navigation.scss'
 import { homeContent, sourceHome, fontEnd, background, game } from '../../rooter/rootTable'
 
+import { homeContent, sourceR, advertHome} from '../../rooter/rootTable'
 
 export default class Navigation extends Component {
 

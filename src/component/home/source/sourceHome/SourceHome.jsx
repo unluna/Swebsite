@@ -1,8 +1,8 @@
 import React,{Component} from 'react'
-import { Route, Switch, Redirect } from 'react-router-dom'
+// import { Route, Switch, Redirect } from 'react-router-dom'
 import SourceNav from '../../../../rooter/K-nav/SourceNav'
 import SourceContainer from './K-container/SourceContainer'
-import SourceSendC from '../../../../rooter/K-send/SourceSend'
+import SourceSend from '../../../../rooter/K-send/SourceSend'
 import './SourceHome.scss'
 export default class SourceHome extends Component{
   render(){
@@ -10,7 +10,7 @@ export default class SourceHome extends Component{
       <div className="sourceHome">
         <SourceNav />
         <SourceContainer />
-        <SourceSendC />
+        <SourceSend />
       </div>
     )
   }

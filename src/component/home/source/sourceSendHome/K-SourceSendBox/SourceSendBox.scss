@@ -14,7 +14,7 @@
 textarea {
   border: none;
   resize: none;
-  overflow: auto;
+  overflow: visible;
   background-color: rgba(209, 194, 211, 0.2);
   line-height: 2rem;
 }
@@ -28,24 +28,31 @@ textarea::placeholder {
   flex-direction: column;
 }
 
-.text, .title {
+.SourceSendText, .Boxtitle {
   display: flex;
   justify-content: center;
   margin: 0 2rem;
 }
 
-.text textarea {
+.SourceSendText {
+  height: auto;
+  overflow-y: visible;
+}
+
+.SourceSendText textarea {
   text-indent: 2em;
   line-height: 2rem;
   width: 43rem;
-  height: 20rem;
+  height: 48rem;
+  min-height: 20rem;
   font-size: 1rem;
   padding: 1rem;
   min-width: 166px;
   margin-top: 0.3rem;
+  overflow-y: visible;
 }
 
-.title textarea {
+.Boxtitle textarea {
   text-align: center;
   font-weight: normal;
   font-size: 1.2rem;
@@ -66,6 +73,18 @@ textarea::placeholder {
   justify-content: space-between;
   padding: 2rem;
   height: 2rem;
+}
+
+.Count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 43rem;
+  p {
+    width: max-content;
+    color: red;
+
+  }
 }
 
 .box-operate {
@@ -96,7 +115,7 @@ textarea::placeholder {
     width: 90%;
     min-height: 437px;
   }
-  .title textarea {
+  .Boxtitle textarea {
     font-size: 1rem;
     font-weight: bolder;
     min-height: 45px;
@@ -107,8 +126,10 @@ textarea::placeholder {
     box-sizing: border-box;
   }
 
-  .text textarea {
+  .SourceSendText textarea {
     font-size: 1rem;
+    height: auto;
+    overflow-y: hidden;
     min-height: 222px;
     line-height: 3rem;
   }
@@ -145,14 +166,17 @@ textarea::placeholder {
 }
 
 @media only screen and (max-width: 767px) {
-  .text, .title {
+  .SourceSendText, .Boxtitle {
     margin: 0 1rem;
   }
   button span {
     padding: 0 1rem;
   }
-  .title textarea {
+  .Boxtitle textarea {
     margin: 0.6rem 0.5rem;
+  }
+  .SourceSendText textarea{
+    height:18rem;
   }
   .box-info {
     padding: 1rem;

@@ -6,3 +6,10 @@ export const MEMBER_FONTEND = 'MEMBER_FONTEND';
 export const MEMBER_BACKGROUND = 'MEMBER_BACKGROUND';
 //获取在game页面中的成员信息
 export const MEMBER_GAME = 'MEMBER_GAME';
+//切换sourceNav导航栏状态
+export  const CHANGE_SOURCENAV_STATE='CHANGE_SOURCENAV_STATE';
+export const FRONT_REQUEST_START='FRONT_REQUEST_START';
+export const ITEM_SHOW='ITEM_SHOW'
+export const CHANGE_ITEM='CHANGE_ITEM'
+export const SET_TIME='SET_TIME'
+export const SEND_TEXT='SEND_TEXT'
