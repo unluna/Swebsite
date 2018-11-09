@@ -4,7 +4,7 @@ import {
   GET_INNER,
   MEMBER_FONTEND,
   MEMBER_GAME,
-  MEMBER_BACKGROUND
+  MEMBER_BACKGROUND,
 
   CHANGE_SOURCENAV_STATE,
   FRONT_REQUEST_START,
@@ -15,10 +15,10 @@ import {
 } from './action-types'
 
 //inner：获取搜索框的文字
-export const getInner = (inner) => ({
-  type: GET_INNER,
-  data: inner
-}) //type:名字 data：操作的数据
+// export const getInner = (inner) => ({
+//   type: GET_INNER,
+//   data: inner
+// }) //type:名字 data：操作的数据
 
 // export const fontEndGet = (fontEnd) => ({
 //   type: MEMBER_FONTEND,
@@ -117,19 +117,7 @@ export const changeItemShow = (ItemShow) => ({
 export const getItem = (item) => ({
   type: CHANGE_ITEM, data: item,
 })
-export const AjaxListItem = (state = 'front') => {
-  return dispatch => {
-    let url = `C:\\Users\\peng\\WebstormProjects\\Swebsite1\\src\\component\\home\\source`
-    fetchJsonp(url)
-      .then(function (json) {
-        dispatch(changeItemShow('what'))
-        let navItem = json.state.map((name, key) => {
-          return (navItem(name))
-        })
-        dispatch(getItem(navItem))
-      })
-  }
-}
+
 export const setTimeOut = (item) => ({
   type: SET_TIME, data: item
 

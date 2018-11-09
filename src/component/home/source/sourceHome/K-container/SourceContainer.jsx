@@ -3,7 +3,7 @@ import './SourceContainer.scss'
 import SourceHotPoint from './K-SouceHotPoint/SourceHotPoint'
 import SourceNoteDiv from './K-SourceNoteDiv/SourceNoteDiv'
 import { connect } from 'react-redux'
-import { changeSourceNavState, frontStart, AjaxListItem, setOut, setTimeOut } from '../../../../../redux/actions'
+import { changeSourceNavState, frontStart,  setOut, setTimeOut } from '../../../../../redux/actions'
 
 class SourceContainer extends Component {
   /*data = [
@@ -75,7 +75,6 @@ const mapStateToProps = (state) => ({
 export default connect(mapStateToProps, {
   changeSourceNavState,
   frontStart,
-  AjaxListItem,
   setTimeOut,
   setOut
 })(SourceContainer)
