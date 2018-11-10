@@ -1,117 +1,121 @@
 @import "../../../../../../common";
 
-.noteDiv h2 {
-  display: flex;
-  font-size: 1.3rem;
-  font-weight: bold;
-}
-
-p {
-  font-weight: lighter;
-  overflow: hidden;
-  line-height: 2.5rem;
-  font-size: 1.2rem;
-}
-
-.noteHeader {
-  padding: 1rem 2rem;
-  height: max-content;
-}
-
-li img {
-  margin-right: 1.7rem;
-  border-radius: 50px;
-}
-
-.sender {
-  display: inline;
-  font-size: 0.8em;
-  color: #379be9;
-}
-
 .listItem {
-  padding-top: 2rem;
-}
 
-/*.container ul:last-child {
-  padding-bottom: 5rem;
-}*/
-
-.noteDiv {
-  margin-bottom: 1rem;
-  border: 3px solid silver;
-  border-radius: 12px;
-  background-color: white;
-  min-height:187px ;
-}
-
-.sourceName {
-  padding-top: 1rem;
-}
-
-.noteHeader {
-  padding: 1rem 3rem;
-}
-
-.sender {
-  display: inline;
-  font-size: 1rem;
-  color: $K_sender;
-}
-
-.header {
-  display: inline-block;
-  padding-right: 1rem;
-  border-right: 3px solid $K_herder;
-}
-
-.time {
-  color: #999;
-  font-size: 0.6rem;
-}
-
-li {
-  height: max-content;
-}
-
-.sourceName {
-  width: auto;
-  color: $K_sourceName;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.textOut .text {
-  margin: 0 1.8rem;
-  padding-bottom: 2rem;
-  text-indent: 2.5rem;
-  text-align: justify;
-  //word-break: break-all;
-  overflow-y: hidden;
-}
-
-@media screen and (max-width: 767px) {
-  .noteDiv {
-    //margin: 2.5rem 0;
+  .noteDiv h2 {
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
   }
 
   p {
-    line-height: 1.5rem;
-    font-size: 0.8rem;
+    font-weight: lighter;
+    overflow: hidden;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
   }
-  .text {
-    text-indent: 1.6rem;
-  }
-  .sender {
-    font-size: 0.8rem;
-  }
-  .listItem {
-    padding-top: 1.5rem;
-  }
+
   .noteHeader {
-    padding: 1rem 1.2rem;
+    padding: 1rem 2rem;
+    height: max-content;
   }
-  .noteDiv h2 {
+
+  li img {
+    margin-right: 1.7rem;
+    border-radius: 50px;
+  }
+
+  .sender {
+    display: inline;
+    font-size: 0.8em;
+    color: #379be9;
+  }
+
+  .listItem {
+    padding-top: 2rem;
+  }
+
+  /*.container ul:last-child {
+    padding-bottom: 5rem;
+  }*/
+
+  .noteDiv {
+    margin-bottom: 1rem;
+    border: 3px solid silver;
+    border-radius: 12px;
+    background-color: white;
+    min-height: 187px;
+  }
+
+  .sourceName {
+    padding-top: 1rem;
+  }
+
+  .noteHeader {
+    padding: 1rem 3rem;
+  }
+
+  .sender {
+    display: inline;
     font-size: 1rem;
+    color: $K_sender;
   }
+
+  .header {
+    display: inline-block;
+    padding-right: 1rem;
+    border-right: 3px solid $K_herder;
+  }
+
+  .time {
+    color: #999;
+    font-size: 0.6rem;
+  }
+
+  li {
+    height: max-content;
+  }
+
+  .sourceName {
+    width: auto;
+    color: $K_sourceName;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .textOut .text {
+    margin: 0 1.8rem;
+    padding-bottom: 2rem;
+    text-indent: 2.5rem;
+    text-align: justify;
+    //word-break: break-all;
+    overflow-y: hidden;
+  }
+
+  @media screen and (max-width: 767px) {
+    .noteDiv {
+      //margin: 2.5rem 0;
+    }
+
+    .text > p {
+      line-height: 1.5rem;
+      font-size: 0.8rem;
+    }
+    .text {
+      text-indent: 1.6rem;
+    }
+    .sender {
+      font-size: 0.8rem;
+    }
+    .listItem {
+      padding-top: 1.5rem;
+    }
+    .noteHeader {
+      padding: 1rem 1.2rem;
+    }
+    .noteDiv h2 {
+      font-size: 1rem;
+    }
+  }
+
 }
