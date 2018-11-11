@@ -1,11 +1,13 @@
 @import "../../../../common";
+
 .sourceHome {
-background-color: $K_sourceHome;
+  background-color: $K_sourceHome;
   padding-bottom: 5rem;
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
+
 @media screen and (max-width: 767px) {
-  .sourceHome{
- overflow-x: hidden;
+  .sourceHome {
+    overflow-x: hidden;
   }
-  }
+}
