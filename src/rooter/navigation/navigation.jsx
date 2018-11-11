@@ -21,7 +21,7 @@ export default class Navigation extends Component {
               <h1>教师</h1>
             </li>
           </NavLink>
-          <NavLink to={homeContent} onClick={this.props.ChangeNavTop}>
+          <NavLink to={advertHome} onClick={this.props.ChangeNavTop}>
             <li>
               <div className={'icon-lock'}/>
               <h1>宣传</h1>
