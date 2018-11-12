@@ -10,6 +10,7 @@
     flex-direction: row;
     color: white;
     padding-top: 3rem;
+
     .News, .Notes {
       font-size: 2rem;
       padding: 3rem;
@@ -17,14 +18,59 @@
       border-radius: 5em;
       margin: 0 2rem;
     }
+
+    .advertButton {
+      padding: 3rem 0;
+      border: 3px solid #52506c;
+      outline: none;
+      border-radius: 20%;
+      width: max-content;
+      color: #52506c;
+      > span {
+        font-size: 1.5rem;
+        text-align: center;
+        padding-right: 5rem;
+        //padding-right: 50%;
+        //color: red;
+        transition: all 0.6s ease;
+      }
+    }
+
+    .advertButton > span::before {
+      content: 'Want to ';
+      opacity: 0;
+      transition: all 0.5s ease;
+    }
+    .advertButton:hover {
+      > span {
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+      }
+
+      #spanL::before, #spanR::before {
+        opacity: 1;
+      }
+    }
+    .advertButton:hover {
+      box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+      outline: deepskyblue;
+      border: 3px solid deepskyblue;
+      opacity: 1;
+      transition: all 0.4s ease;
+    }
+    .advertButton:active {
+      box-shadow: none;
+      transform: translateY(1px)
+    }
+
   }
   .Welcome {
     @include center;
+    user-select: none;
     padding-top: 2rem;
     flex-direction: column;
     font-size: 3rem;
     height: max-content;
-
     color: white;
     div {
       width: max-content;

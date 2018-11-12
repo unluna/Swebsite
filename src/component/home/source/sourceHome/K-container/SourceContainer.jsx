@@ -68,7 +68,6 @@ class SourceContainer extends Component {
 
 const mapStateToProps = (state) => ({
   goToSourceNav: state.goToSourceNav,
-  getItems: state.getItems,
   setTime: state.setTime,
   setText:state.setText
 })

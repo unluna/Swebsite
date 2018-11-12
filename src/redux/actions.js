@@ -5,7 +5,7 @@ import {
   MEMBER_FONTEND,
   MEMBER_GAME,
   MEMBER_BACKGROUND,
-
+  GET_MENBERS,
   CHANGE_SOURCENAV_STATE,
   FRONT_REQUEST_START,
   ITEM_SHOW,
@@ -47,14 +47,12 @@ export const AjaxBackground = () => {
   return dispatch => {
     setTimeout(function () {
         let BgPageMember = [{
-            name: 'aaa',
+          name: 'aaa',
 
-
-          },
+        },
           {
             name: 'aaa',
             title: ''
-
 
           },
           {
@@ -74,17 +72,15 @@ export const AjaxBackground = () => {
           }
         ]
         dispatch(backgroundGet(BgPageMember))
-      return(BgPageMember)
+        return (BgPageMember)
 
       }
 
       , 2000)
 
-
   }
 
 }
-
 
 // export const gameGet = (game) => ({
 //   type: MEMBER_GAME,
@@ -162,16 +158,42 @@ export const setOut = () => {
         }
       ]
       dispatch(setTimeOut(data))
-    },)
+    }, 1000)
+    setTimeout(function () {
+      /*dispatch(sendContent(content))*/
+    }, 1000)
   }
 }
-export const sendContent=(content)=>({
-  type:SEND_TEXT,data:content
+export const sendContent = (content) => ({
+  type: SEND_TEXT, data: content
 })
-export const send = (content) => {
+export const send = () => {
   return dispatch => {
-    dispatch(sendContent(content))
+    /*dispatch(sendContent(content))*/
   }
-
 }
-
+export const getMember = (members) => ({
+  type: GET_MENBERS, data: members
+})
+/*export const membersInfo = (member) => {
+  return (
+      []
+  )
+}*/
+export const members = () => {
+  return dispatch => {
+    setTimeout(function () {
+      let info = {
+        grade2017: [{grade: '2017'}, {name: '0网工二班牛鬼蛇神0'}, {name: 'q网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}],
+        grade2016: [
+          {grade: '2016'}, {name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'},{name: '网工二班牛鬼蛇神1'}, {name: '网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}],
+        grade2015: [{grade: '2015'}, {name: '网工二班牛鬼蛇神2'}, {name: '网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}, {name: '网工二班牛鬼蛇神'}],
+      }
+      for (let i in info) {
+        dispatch(getMember(info[i]))
+        /*console.log(i)
+        console.log(Object.keys(info))*/
+      }
+    }, 1000)
+  }
+}

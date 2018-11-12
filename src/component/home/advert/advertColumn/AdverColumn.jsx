@@ -7,11 +7,15 @@ export default class AdvertColumn extends Component {
     return (
       <div className="AdvertColumn">
         <div className={'SendSomethings'}>
-          <div className={'News'}>Send News</div>
-          <div className={'Notes'}>Send Notices</div>
+          <div className={'News'}>
+            <button className={'advertButton'}><span className={'spanL'} id={'spanL'}>Send News</span></button>
+          </div>
+          <div className={'Notes'}>
+            <button className={'advertButton'}><span className={'spanR'} id={'spanR'}>Send Notices</span></button>
+          </div>
         </div>
         <div className={'Welcome'}>
-          <div>Meet Our Members</div>
+          <h2>Meet Our Members</h2>
         </div>
         <div className="column">
           <ul>
@@ -33,7 +37,7 @@ export default class AdvertColumn extends Component {
             </li>
             <li>
               <div className="up">
-                <div className={'logo'}> </div>
+                <div className={'logo'}></div>
               </div>
               <div className="down">
                 <div className={'MemberName'}><span> 佟湘玉</span></div>

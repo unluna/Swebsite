@@ -16,13 +16,13 @@ class SourceSendBox extends React.Component {
       inners: event.target.value,
       innersNum: inners.toString().length,
     })
-    this.props.send(inners)
+    //this.props.send(inners)
   }
   click = () => {
-    //this.props.send()
     const text = this.props.sendText
-    console.log(text)
+   // console.log(text)
   }
+
   /*componentDidMount () {
     let textarea = (id) => document.getElementById(id)
     let count = (id) => {
@@ -65,7 +65,7 @@ class SourceSendBox extends React.Component {
         <div className="box-login">
           <div className="box-textArea">
             <div className="Boxtitle"><textarea
-              placeholder="请输入标题"/></div>
+              placeholder="请输入标题" /></div>
             <div className="SourceSendText">
               <textarea placeholder="发点啥？(少于1000字符)" id="boxTextarea" onChange={this.change} value={inners}
                         maxLength={1000}/>
@@ -78,7 +78,7 @@ class SourceSendBox extends React.Component {
               <span className="box-operate-line">|</span>
             </div>
             <div className="box-commentBtn">
-              <button className="iconfonticon-information-delivery">
+              <button className="sendButton">
                 <div className="button"><span onClick={this.click}>发布</span></div>
               </button>
             </div>

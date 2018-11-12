@@ -105,7 +105,7 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 767px) {
-  button:active {
+  .sendButton:active {
     background-color: $K_ButtonActive;
     box-shadow: 0 2px $K_LiHover;
     transform: translateY(2px);
@@ -138,7 +138,7 @@ textarea::placeholder {
     font-size: 1rem;
   }
 
-  button {
+  .sendButton {
     border-radius: 28px;
     border: none;
     outline: none;
@@ -147,13 +147,13 @@ textarea::placeholder {
     background-color: $K_HoverBgc;
   }
 
-  button span {
+  .sendButton span {
     font-size: 1rem;
     transition: 0.3s;
     padding: 0 2rem;
     min-height: 21px;
   }
-  button:active {
+  .sendButton:active {
     background-color: #3e8e41;
     box-shadow: 0 2px $K_LiHover;
     transform: translateY(2px)
@@ -169,14 +169,14 @@ textarea::placeholder {
   .SourceSendText, .Boxtitle {
     margin: 0 1rem;
   }
-  button span {
+  .sendButton span {
     padding: 0 1rem;
   }
   .Boxtitle textarea {
     margin: 0.6rem 0.5rem;
   }
-  .SourceSendText textarea{
-    height:18rem;
+  .SourceSendText textarea {
+    height: 18rem;
   }
   .box-info {
     padding: 1rem;
@@ -185,7 +185,7 @@ textarea::placeholder {
 
 @media only screen and (min-width: 769px) {
 
-  button {
+  .sendButton {
     border-radius: 28px;
     border: none;
     outline: none;
@@ -193,32 +193,32 @@ textarea::placeholder {
     cursor: pointer;
   }
 
-  button span {
+  .sendButton span {
     font-size: 1rem;
     transition: 0.3s;
     padding-left: 1.3rem;
   }
 
-  button:hover {
+  .sendButton:hover {
     background-color: $K_HoverBgc; /* Green */
     color: white;
     box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
   /*box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
-  button span:after {
+  .sendButton span:after {
     content: ' »';
     opacity: 0;
   }
 
-  button:hover span {
+  .sendButton:hover span {
     padding-right: 1rem;
   }
 
-  button:hover span:after {
+  .sendButton:hover span:after {
     opacity: 1;
     right: 0;
   }
-  button:active {
+  .sendButton:active {
     background-color: $K_ButtonActive;
     box-shadow: 0 2px silver;
     transform: translateY(2px);

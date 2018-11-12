@@ -7,7 +7,9 @@ import {
   MEMBER_GAME,
   CHANGE_SOURCENAV_STATE,
   GET_INNER, FRONT_REQUEST_START, CHANGE_ITEM,
-  SET_TIME, SEND_TEXT
+  SET_TIME,
+  SEND_TEXT,
+  GET_MENBERS
 } from './action-types'
 
 //inners：输入框获取的文字
@@ -21,7 +23,7 @@ function inners (state = '', action) {
 }
 
 //fontendM获取成员信息
-function fontendM (state='',action) {
+function fontendM (state = '', action) {
   switch (action.type) {
     case MEMBER_FONTEND:
       return action.data
@@ -31,15 +33,16 @@ function fontendM (state='',action) {
   }
 
 }
+
 //backgroundM获取成员信息
-function backgroundGetM (state=[
+function backgroundGetM (state = [
   {
     name: 'aaa',
     title: 'awdaaaaaaa'
 
   },
 
-],action) {
+], action) {
   switch (action.type) {
     case MEMBER_BACKGROUND:
       return action.data
@@ -49,8 +52,9 @@ function backgroundGetM (state=[
   }
 
 }
+
 //gameM获取成员信息
-function gameM (state='',action) {
+function gameM (state = '', action) {
   switch (action.type) {
     case MEMBER_GAME:
     //action{type,data数据名}
@@ -72,35 +76,51 @@ function goToSourceNav (state = 'front', action) {
       return state
   }
 }
-function getItems (state=[],action) {
-  switch(action.type){
+
+function getItems (state = [], action) {
+  switch (action.type) {
     case CHANGE_ITEM:
-      return action.data;
+      return action.data
     default:
-      return state;
+      return state
   }
 }
-function setTime (state=[],action) {
-  switch (action.type){
+
+function setTime (state = [], action) {
+  switch (action.type) {
     case SET_TIME:
       return action.data
     default:
       return state
   }
 }
-function sendText (state='A',action) {
-  switch (action.type){
+
+//发送到资源
+function sendText (state = [{}], action) {
+  switch (action.type) {
     case SEND_TEXT:
-      return action.data;
+      return action.data
     default:
       return state
   }
 }
+
+function getMembers (state = [], action) {
+  switch (action.type) {
+    case GET_MENBERS:
+      return [...state,...action.data]
+    default:
+      return state
+
+  }
+}
+
 export default combineReducers({
-  inners,backgroundGetM,
+  inners, backgroundGetM,
   goToSourceNav,
   getItems,
   setTime,
   sendText,
+  getMembers
 })
 

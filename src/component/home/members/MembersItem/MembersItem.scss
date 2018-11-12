@@ -1,0 +1,147 @@
+@import '../../../../common';
+
+/*li {
+  list-style: none;
+}*/
+.Item {
+  ::selection {
+    color: black;
+    padding-bottom: 0.02rem;
+    background-color: $orange;
+  }
+  ul {
+    li {
+      line-height: 2rem;
+      height: 29rem;
+      > div {
+        .flex {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .info {
+            width: auto;
+            max-width: 51rem;
+            word-break: break-all;
+            // text-align: center;
+            // margin-left: 8rem;
+            ::selection {
+              color: black;
+              padding-bottom: 0.02rem;
+              background-color: $orange;
+            }
+            > h4 {
+              color: $orange;
+            }
+            .name {
+              display: inline;
+              width: max-content;
+            }
+          }
+        }
+        > h4 {
+          width: 100%;
+          font-size: 1.2rem;
+          font-weight: 600;
+          margin-bottom: 0.3rem;
+          text-align: center;
+        }
+        .itemBorder {
+          border-top: 5px solid #EFEFEF;
+          border-bottom: 1px solid #EFEFEF;
+          clear: both;
+          height: 4px;
+          margin: 0;
+          transition: all 0.4s ease;
+        }
+        .img {
+          position: relative;
+          background: url("./images/img03.png") center no-repeat;
+          width: 260px;
+          background-size: cover;
+          height: 404px;
+          border: 5px solid #EFEFEF;
+          transition: all 0.4s ease;
+        }
+
+        .itemMask {
+          width: 260px;
+          height: 404px;
+          position: absolute;
+          .maskIcon {
+            opacity: 0;
+            width: auto;
+            height: inherit;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: all 0.5s ease;
+
+            .topLeft, .topRight, .botRight, .botLeft {
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              transition: all 0.5s ease;
+              background-color: rgba(241, 90, 35, 0.8);
+            }
+            .topLeft {
+              left: 90px;
+              top: 162px;
+              border-radius: 90px 0 0 0;
+            }
+            .topRight {
+              left: 172px;
+              top: 162px;
+              border-radius: 0 90px 0 0;
+            }
+
+            .botLeft {
+              left: 90px;
+              top: 243px;
+              border-radius: 0 0 0 90px;
+            }
+
+            .botRight {
+              left: 172px;
+              top: 243px;
+              border-radius: 0 0 90px 0;
+            }
+            > div {
+              position: absolute;
+              background-color: white;
+              width: 20px;
+              height: 20px;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+            }
+
+          }
+        }
+      }
+    }
+    li:hover {
+      transition: all 0.5s ease;
+      #maskIcon {
+        opacity: 1;
+      }
+      #tl, #bl, #tr, #br {
+        left: 50%;
+        top: 50%;
+        transform: translate(-100%, -100%);
+      }
+      #tr {
+        transform: translate(0, -100%);
+      }
+      #br {
+        transform: translate(0, 0);
+      }
+      #bl {
+        transform: translate(-100%, 0);
+      }
+      .img, .itemBorder {
+        border-color: #F15A23
+      }
+    }
+  }
+}
