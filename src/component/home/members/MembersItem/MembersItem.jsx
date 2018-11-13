@@ -4,6 +4,7 @@ import './MembersItem.scss'
 export default class MembersItem
   extends Component {
   render () {
+    //hh
     const {info} = this.props
     return (
       <div className={'Item'}>

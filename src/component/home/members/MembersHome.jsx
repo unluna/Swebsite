@@ -11,6 +11,7 @@ import { connect } from 'react-redux'
 }
 
   render () {
+    //ggg
 const info=this.props.getMembers
     return (
       <div>
