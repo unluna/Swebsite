@@ -6,42 +6,12 @@ import './MembersHome.scss'
 import { members, } from '../../../redux/actions'
 import { connect } from 'react-redux'
  class MembersHome extends Component {
-  /*data = [{
-    grade2017: [
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-    ]
-  }, {
-    grade2016: [
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-    ]
-  }, {
-    grade2015: [
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-      {name: '网工二班牛鬼蛇神'},
-    ]
-  }
-  ]*/
-  componentDidMount(){
+  componentWillMount(){
   this.props.members()
 }
 
   render () {
 const info=this.props.getMembers
-    //console.log(info)
     return (
       <div>
         <HomeNav/>

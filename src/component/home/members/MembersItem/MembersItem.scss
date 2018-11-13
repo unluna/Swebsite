@@ -6,7 +6,8 @@
 .Item {
   ::selection {
     color: black;
-    padding-bottom: 0.02rem;
+    //padding-bottom: 0.02rem;
+    transform: translateY(2px);
     background-color: $orange;
   }
   ul {
