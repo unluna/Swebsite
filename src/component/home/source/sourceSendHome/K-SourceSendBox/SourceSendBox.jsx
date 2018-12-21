@@ -1,5 +1,4 @@
 import React from 'react'
-// import SourceSendBoxCount from './sourceSendCount/SourceSendBoxCount'
 import './SourceSendBox.scss'
 import { send, sendContent } from '../../../../../redux/actions'
 import { connect } from 'react-redux'
@@ -10,47 +9,33 @@ class SourceSendBox extends React.Component {
     innersNum: 0,
   }
 
+  num=(event)=>{
+    const {inners, innersNum} = this.state
+    this.setState({
+      inners: event.target.value,
+      innersNum: inners.toString().length,
+    })
+  }
   change = (event) => {
     const {inners, innersNum} = this.state
     this.setState({
       inners: event.target.value,
       innersNum: inners.toString().length,
     })
-    //this.props.send(inners)
+    const node = this.refs.text
+    node.style.height = 'auto'
+    node.style.height = node.scrollHeight - 35.997 + 'px'
+  }
+  enter = (event) => {
+    if(event.keyCode===13) {
+      event.preventDefault()
+    }
   }
   click = () => {
     const text = this.props.sendText
-   // console.log(text)
   }
 
-  /*componentDidMount () {
-    let textarea = (id) => document.getElementById(id)
-    let count = (id) => {
-      textarea(id).onchange = () => {
-        const idValue = textarea(id).value
-        let data1 = {
-          num: parseInt(idValue.length),
-        }
-        data1.dNum = 1000 - data1.num
-        this.setState = ({
-          num: data1.num,
-          dNum: data1.dNum
-        })
-        alert(this.setState.num + 'haha' + this.setState.dNum)
-      }
-    }
- count('boxTextarea')
-  }*/
-
-  /*  autoHeight = (obj) => {
-      // let el=obj;
-      setTimeout(
-        () => {obj.style.text.cssText = 'height' + obj.scrollHeight + 'px'}, 0
-      )
-    }*/
-
   render () {
-    //const send = () => this.props.send
     const {inners, innersNum} = this.state
     if ({innersNum} > 1000) {
       this.setState = {
@@ -58,17 +43,17 @@ class SourceSendBox extends React.Component {
       }
       alert(innersNum)
     }
-    /*console.log(inners)
-    console.log(innersNum)*/
+
     return (
       <div className="box">
         <div className="box-login">
           <div className="box-textArea">
             <div className="Boxtitle"><textarea
-              placeholder="请输入标题" /></div>
+              placeholder="请输入标题(25字以内哟)" maxLength={25} ref={'title'} onKeyDown={this.enter}/></div>
             <div className="SourceSendText">
-              <textarea placeholder="发点啥？(少于1000字符)" id="boxTextarea" onChange={this.change} value={inners}
-                        maxLength={1000}/>
+              <textarea rows={'1'} placeholder="发点啥？(少于1000字符)" id="boxTextarea" onChange={this.change}
+                        onMouseUp={this.change}                onKeyUp={this.change}  value={inners} onMouseMove={this.num}
+                        maxLength={1000} ref={'text'}/>
             </div>
           </div>
           <div className={'Count'}><p>{innersNum}</p><p>/1000</p></div>
@@ -89,9 +74,14 @@ class SourceSendBox extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  sendText: state.sendText
-})
+const
+  mapStateToProps = (state) => ({
+    sendText: state.sendText
+  })
 export default connect(mapStateToProps, {
   send, sendContent
-})(SourceSendBox)
+})
+
+(
+  SourceSendBox
+)

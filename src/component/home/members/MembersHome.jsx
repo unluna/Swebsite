@@ -5,19 +5,23 @@ import HomeNavContent from '../homeContent/homeNavContent/homeNavContent'
 import './MembersHome.scss'
 import { members, } from '../../../redux/actions'
 import { connect } from 'react-redux'
- class MembersHome extends Component {
-  componentWillMount(){
-  this.props.members()
-}
+
+class MembersHome extends Component {
+  componentWillMount () {
+    let itemListShow = this.props.membersStart
+    console.log(itemListShow)
+    if (itemListShow === 'first') {
+      this.props.members()
+    }
+  }
 
   render () {
-    //ggg
-const info=this.props.getMembers
+
+    const info = this.props.getMembers
     return (
       <div>
         <HomeNav/>
         <HomeNavContent/>
-        <div className={'cutOffLine'}/>
         <div className={'outerFrame'}>
           <div>
             <MembersItem info={info}/>
@@ -29,8 +33,9 @@ const info=this.props.getMembers
 }
 
 const mapStateToProps = (state) => ({
-  getMembers:state.getMembers
+  getMembers: state.getMembers,
+  membersStart: state.membersStart
 })
 export default connect(mapStateToProps, {
-members
+  members
 })(MembersHome)

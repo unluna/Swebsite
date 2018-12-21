@@ -9,14 +9,15 @@ import {
   GET_INNER, FRONT_REQUEST_START, CHANGE_ITEM,
   SET_TIME,
   SEND_TEXT,
-  GET_MENBERS
+  GET_MEMBERS,
+  MEMBERS_START
 } from './action-types'
 
-//inners：输入框获取的文字
-function inners (state = '', action) {
-  switch (action.type) {     //action.js每定义一个方法，下面会有两个东西 1类型 2数据   数据会返给reducers  .type方法携带data数据
+
+function inners (state = [{}], action) {
+  switch (action.type) {
     case GET_INNER:
-      return action.data
+      return [...state,action.data]
     default:
       return state
   }
@@ -107,12 +108,21 @@ function sendText (state = [{}], action) {
 
 function getMembers (state = [], action) {
   switch (action.type) {
-    case GET_MENBERS:
-      return [...state,...action.data]
+    case GET_MEMBERS:
+      return [...state, ...action.data]
     default:
       return state
-
   }
+}
+
+function membersStart (state = 'first', action) {
+  switch (action.type) {
+    case MEMBERS_START:
+      return action.data
+    default :
+      return state
+  }
+
 }
 
 export default combineReducers({
@@ -121,6 +131,7 @@ export default combineReducers({
   getItems,
   setTime,
   sendText,
-  getMembers
+  getMembers,
+  membersStart
 })
 

@@ -2,45 +2,53 @@
 
 .SourceHomeNav {
   height: 4.5rem;
+  user-select: none;
 }
 
 .SourceHomeNav li {
   @include SourceA;
-}
-
-.SourceHomeNav li:hover {
-  a:hover {
-    color: #8a988e;
-    text-decoration: none;
-  }
-  border: 1px solid deepskyblue;
-  box-shadow: 2px 2px 2px silver;
-}
-
-a {
-  text-decoration: none;
-}
-
-li > a {
-  color: #8a988e;
-  text-decoration: none;
+  cursor: pointer;
 }
 
 .SourceHomeNav ul {
   display: flex;
   font-size: 1rem;
-  height:1.5rem;
+  height: 1.5rem;
   margin-left: 8.5rem;
   margin-top: 20px;
   padding-top: 2.3rem;
-  max-width: max-content;
-  min-height: max-content;
+  max-width: 475px;
+  // max-height: 24px;
   min-width: 320px;
+  border-bottom: 1px solid silver;
 }
 
 .SourceHomeNav li {
   padding: 0 1rem;
-  border-bottom: 1px solid silver;
+  height: 24px;
+  max-width: 64px;
+  max-height: 24px;
+  margin: 0 2px;
+  min-width: 32px;
+  color: #8a988e;
+}
+
+.SourceHomeNav li:hover {
+  margin: 0 1px;
+    color: #8a988e;
+    text-decoration: none;
+  border: 1px solid deepskyblue;
+  //border-bottom: 1px solid silver;
+  box-shadow: 2px 2px 2px silver;
+}
+
+#choose {
+  margin: 0 1px;
+  color: #8a988e;
+  text-decoration: none;
+  border: 1px solid deepskyblue;
+  //border-bottom: 1px solid silver;
+  box-shadow: 2px 2px 2px silver;
 }
 
 @media screen and (max-width: 767px) {
@@ -56,7 +64,6 @@ li > a {
   .SourceHomeNav ul {
     @include center;
     height: 2.2rem;
-    width: max-content;
     margin: 0;
     padding-top: 1rem;
   }
@@ -64,6 +71,7 @@ li > a {
   .SourceHomeNav li {
     padding: 0 0.3rem;
     font-size: 1rem;
+
   }
 
 }

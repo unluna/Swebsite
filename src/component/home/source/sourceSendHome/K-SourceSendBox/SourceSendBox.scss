@@ -14,7 +14,7 @@
 textarea {
   border: none;
   resize: none;
-  overflow: visible;
+  //overflow: visible;
   background-color: rgba(209, 194, 211, 0.2);
   line-height: 2rem;
 }
@@ -43,13 +43,13 @@ textarea::placeholder {
   text-indent: 2em;
   line-height: 2rem;
   width: 43rem;
-  height: 48rem;
+  height:20rem;
   min-height: 20rem;
   font-size: 1rem;
   padding: 1rem;
   min-width: 166px;
   margin-top: 0.3rem;
-  overflow-y: visible;
+  overflow-y: hidden;
 }
 
 .Boxtitle textarea {
@@ -61,6 +61,7 @@ textarea::placeholder {
   height: 2.9rem;
   line-height: 2.8rem;
   min-width: 160px;
+  overflow-y: hidden;
 }
 
 textarea::placeholder {
@@ -204,7 +205,6 @@ textarea::placeholder {
     color: white;
     box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
-  /*box-shadow: 3px 5px 10px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);*/
   .sendButton span:after {
     content: ' »';
     opacity: 0;
