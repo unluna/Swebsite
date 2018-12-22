@@ -14,8 +14,7 @@
   .text p {
     font-weight: lighter;
     overflow: hidden;
-    line-height: 2.5rem;
-    font-size: 1.2rem;
+    line-height: 1.7rem;
   }
 
   .noteHeader {
@@ -30,14 +29,8 @@
     background-size: cover;
     width: 50px;
     height: 40px;
-    margin-right: 0.7rem;
+    margin-right: 0.5rem;
     //border-radius: 50px;
-  }
-
-  .sender {
-    display: inline;
-    font-size: 0.8em;
-    color: #379be9;
   }
 
   .listItem {
@@ -63,14 +56,8 @@
   .sender {
     cursor: pointer;
     display: inline;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: $K_sender;
-  }
-
-  .header {
-    display: inline-block;
-    padding-right: 1rem;
-    border: 3px solid $K_herder;
   }
 
   .time {
@@ -92,11 +79,11 @@
 
   .textOut .text {
     margin: 0 1.8rem;
-    padding-bottom: 2rem;
-    text-indent: 2.5rem;
+    padding-bottom: 1rem;
+    text-indent: 2rem;
     text-align: justify;
-    //word-break: break-all;
     overflow-y: hidden;
+    font-size: 1rem;
   }
   .sourceComment {
     display: flex;
@@ -108,8 +95,6 @@
       flex-direction: row;
       justify-content: flex-end;
       width: 100%;
-      margin: 0 auto;
-
       .comments {
         // background-color: red;
         display: flex;
@@ -136,25 +121,17 @@
         }
         .pp {
           cursor: pointer;
-          font-size: 1rem;
+          //font-size: 1rem;
           line-height: 30px;
           //padding-bottom: 10px;
           user-select: none;
           padding-left: 1rem;
         }
-        /* .review:after {
-           padding-left: 1.8rem;
-           content: "⇡";
-           opacity: 0;
-         }*/
         .Comment {
           width: 29px;
           height: 26px;
           background: url("../../../../../../images/logo.png");
           background-size: cover;
-          /*margin-right: 20px;
-          margin-bottom: 20px;*/
-
         }
       }
 
@@ -168,7 +145,7 @@
         width: 100%;
         border: 1px solid #999;
         border-radius: 2%;
-        height: 1.8rem;
+        height: 4.8rem;
         line-height: 1.8rem;
         font-size: 0.8rem;
 
@@ -217,31 +194,50 @@
       }
     }
   }
+}
   @media screen and (max-width: 767px) {
-    .noteDiv {
-      //margin: 2.5rem 0;
-    }
 
-    .text > p {
-      line-height: 1.5rem;
-      font-size: 0.8rem;
-    }
-    .text {
-      text-indent: 1.6rem;
-    }
-    .sender {
+.listItem {
+  font-size: 0.5rem;
+.noteHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  line-height: 50px;
+  padding: 0.65rem 1.2rem 0 1.2rem;
+  .img {
+    width:43px;
+    height: 40px;
+  }
+  .sender {
+    text-align: center;
+    font-size: 0.5rem;
+    padding-right: 0.3rem;
+  }
+}
 
-      font-size: 0.8rem;
-    }
-    .listItem {
-      padding-top: 1.5rem;
-    }
-    .noteHeader {
-      padding: 1rem 1.2rem;
-    }
-    .noteDiv h2 {
-      font-size: 1rem;
-    }
+  .text p {
+    text-indent: 1.6rem;
+    line-height: 1.4rem;
+    font-size: 0.5rem;
   }
 
+  .listItem {
+    padding-top: 1.5rem;
+  }
+  .noteDiv h2 {
+    font-size: 1rem;
+  }
+  .sourceComment{
+    padding:0 1.8rem;
+  }
+  .sourceComment{
+    .commenting {
+      justify-content: center;
+    }
+  }
 }
+}
+
+
+

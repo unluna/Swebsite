@@ -43,7 +43,7 @@ textarea::placeholder {
   text-indent: 2em;
   line-height: 2rem;
   width: 43rem;
-  height:20rem;
+  height: 20rem;
   min-height: 20rem;
   font-size: 1rem;
   padding: 1rem;
@@ -106,18 +106,18 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 767px) {
+
   .sendButton:active {
     background-color: $K_ButtonActive;
     box-shadow: 0 2px $K_LiHover;
     transform: translateY(2px);
   }
-
   .box-login {
     width: 90%;
     min-height: 437px;
   }
   .Boxtitle textarea {
-    font-size: 1rem;
+    font-size: 0.5rem;
     font-weight: bolder;
     min-height: 45px;
     line-height: 3rem;
@@ -127,14 +127,16 @@ textarea::placeholder {
     box-sizing: border-box;
   }
 
-  .SourceSendText textarea {
-    font-size: 1rem;
-    height: auto;
-    overflow-y: hidden;
-    min-height: 222px;
-    line-height: 3rem;
+  .SourceSendText {
+    margin: 0 0.8rem;
+    textarea {
+      font-size: 1rem;
+      height: auto;
+      overflow-y: hidden;
+      min-height: 300px;
+      line-height: 1.8rem;
+    }
   }
-
   b {
     font-size: 1rem;
   }
@@ -143,15 +145,17 @@ textarea::placeholder {
     border-radius: 28px;
     border: none;
     outline: none;
-    padding: 3rem;
+    padding: 1.3rem;
     color: white;
+    line-height: 3px;
     background-color: $K_HoverBgc;
   }
 
   .sendButton span {
+    text-align: center;
     font-size: 1rem;
     transition: 0.3s;
-    padding: 0 2rem;
+    padding: 0 1rem;
     min-height: 21px;
   }
   .sendButton:active {
@@ -160,32 +164,25 @@ textarea::placeholder {
     transform: translateY(2px)
   }
 
-}
-
-.button {
-  padding: 0.3rem;
-}
-
-@media only screen and (max-width: 767px) {
-  .SourceSendText, .Boxtitle {
-    margin: 0 1rem;
-  }
-  .sendButton span {
-    padding: 0 1rem;
-  }
-  .Boxtitle textarea {
-    margin: 0.6rem 0.5rem;
-  }
-  .SourceSendText textarea {
-    height: 18rem;
-  }
-  .box-info {
-    padding: 1rem;
+  .sourceSend {
+    height: 100vh;
+    font-size: 0.5rem;
+    .SourceSendText, .Boxtitle {
+      margin: 0 1rem;
+    }
+    .sendButton span {
+      padding: 0 0.6rem;
+    }
+    .Boxtitle textarea {
+      margin: 0.6rem 0.5rem;
+    }
+    .SourceSendText textarea {
+      height: 18rem;
+    }
   }
 }
 
 @media only screen and (min-width: 769px) {
-
   .sendButton {
     border-radius: 28px;
     border: none;
@@ -224,3 +221,4 @@ textarea::placeholder {
     transform: translateY(2px);
   }
 }
+

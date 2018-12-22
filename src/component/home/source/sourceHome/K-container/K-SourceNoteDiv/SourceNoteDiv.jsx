@@ -112,7 +112,7 @@ class SourceNoteDiv extends Component {
                   </div>
 
                   <div className={'wrightComment'} ref={'wrightComment'}>
-                      <textarea className={'wright'} placeholder={'我也说一句'} maxLength={100} ref={'text'}>
+                      <textarea className={'wright'} placeholder={'我也说一句'}  ref={'text'} maxLength={200}>
                       </textarea>
                     <div className={'sendComm'}>
                       <button className={'commButton'} onClick={this.click}><span>发送</span></button>

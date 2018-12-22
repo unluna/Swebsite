@@ -49,7 +49,7 @@ class SourceSendBox extends React.Component {
         <div className="box-login">
           <div className="box-textArea">
             <div className="Boxtitle"><textarea
-              placeholder="请输入标题(25字以内哟)" maxLength={25} ref={'title'} onKeyDown={this.enter}/></div>
+              placeholder="请输入标题(20字以内哟)" maxLength={20} ref={'title'} onKeyDown={this.enter}/></div>
             <div className="SourceSendText">
               <textarea rows={'1'} placeholder="发点啥？(少于1000字符)" id="boxTextarea" onChange={this.change}
                         onMouseUp={this.change}                onKeyUp={this.change}  value={inners} onMouseMove={this.num}

@@ -35,8 +35,8 @@
 
 .SourceHomeNav li:hover {
   margin: 0 1px;
-    color: #8a988e;
-    text-decoration: none;
+  color: #8a988e;
+  text-decoration: none;
   border: 1px solid deepskyblue;
   //border-bottom: 1px solid silver;
   box-shadow: 2px 2px 2px silver;
@@ -54,24 +54,23 @@
 @media screen and (max-width: 767px) {
   .SourceHomeNav {
     display: flex;
-    margin-top: 40px;
     width: 100%;
-  }
-  .navFlex {
-    width: 100%;
-    @include center;
-  }
-  .SourceHomeNav ul {
-    @include center;
-    height: 2.2rem;
-    margin: 0;
-    padding-top: 1rem;
-  }
 
-  .SourceHomeNav li {
-    padding: 0 0.3rem;
-    font-size: 1rem;
-
+    .navFlex {
+      width: 100%;
+      @include center;
+      ul {
+        @include center;
+        height: 1.6rem;
+        margin: 0;
+        padding-top: 1rem;
+      }
+      li {
+        padding: 0 0.3rem;
+        font-size: 0.8rem;
+        text-align: center;
+        line-height: 23px;
+      }
+    }
   }
-
 }
